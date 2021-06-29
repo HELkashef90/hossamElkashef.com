@@ -9,11 +9,19 @@
 </head>
 
 <body>
-    <input type="password" name="" placeholder="Enter stg view password" id="1" value="">
-    <button onclick="check()">Enter</button>
+    <form action="">
+        <input autofocus type="password" name="" placeholder="Enter stg view password" id="1" value="">
+        <button id="btn">Enter</button>
+    </form>
     <script>
-        function check(){
-            document.getElementById('1').value === "0121588" ? location.href = "/index-stg.html" : null;
+        localStorage.clear()
+        document.getElementById('btn').addEventListener("click", (event) => {
+            event.preventDefault();
+            check()
+        })
+        function check() {
+            document.getElementById('1').value === "0121588" ? location.href = "/index-stg.html" : document.getElementById('1').value ="";
+            localStorage.setItem('auth','true')
         }
         console.warn("This is not a strong auth, it just to prevent the Search engin bot from scanning the stg site");
     </script>
