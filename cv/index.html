@@ -137,6 +137,18 @@
                 left: 100px
             }
         }
+
+        button {
+
+            background-color: rgb(77, 77, 86);
+            color: white;
+            border: none;
+            margin-left: -20px;
+        }
+
+        a:active {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -144,12 +156,18 @@
     <div class="loading">
         <p>Please wait</p>
         <span><i></i><i></i></span>
+        <a style="display: none;" href="../">
+            <button>Back to HossamElkashef.com</button>
+        </a>
     </div>
 </body>
 <script>
     setTimeout(() => {
-        window.location.href = "Hossam-ELKashef-Senior-JavaScript-CV.pdf"
-    }, 4000);
+        window.location.href = "Hossam-ELKashef-Senior-JavaScript-Dev-CV.pdf"
+        document.getElementsByTagName('p')[0].style.display = "none"
+        document.getElementsByTagName('span')[0].style.display = "none"
+        document.getElementsByTagName('a')[0].style.display = "block"
+    }, 2000);
 </script>
 
 </html>
